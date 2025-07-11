@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 1,
+    "failures": -1,
+    "start": "2025-05-07T07:15:44.319Z",
+    "end": "2025-05-07T07:16:25.303Z",
+    "duration": 40984,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 25,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "16c4d976-eafe-45d7-9211-e9c241b8d2ef",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Zepto_project.cy.js",
+      "file": "cypress\\e2e\\Zepto_project.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "216fed3b-f4c8-4ae8-b974-6051b621c8b1",
+          "title": "Zepto Website Navigation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should load the Zepto homepage successfully",
+              "fullTitle": "Zepto Website Navigation Should load the Zepto homepage successfully",
+              "timedOut": null,
+              "duration": 6507,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Wait for a key element to ensure the page is loaded (avoid arbitrary wait)\ncy.get('header', {\n  timeout: 10000\n}).should('be.visible');",
+              "err": {},
+              "uuid": "f6fe4e57-a5f1-4134-860c-d683f9e2a050",
+              "parentUUID": "216fed3b-f4c8-4ae8-b974-6051b621c8b1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select cafe option",
+              "fullTitle": "Zepto Website Navigation Select cafe option",
+              "timedOut": null,
+              "duration": 16563,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(4000);\ncy.get(secondCarouselItemSelector).should('be.visible').click();",
+              "err": {},
+              "uuid": "65e40daa-fb81-4b64-8fd0-0bab614ef72c",
+              "parentUUID": "216fed3b-f4c8-4ae8-b974-6051b621c8b1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login to zepto",
+              "fullTitle": "Zepto Website Navigation Login to zepto",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.wait(3000);\ncy.get(login_btn).should('be.visible').click();\ncy.wait(3000);\ncy.xpath(phone_field).click().type('7850080120');\ncy.wait(4000);\ncy.xpath(Continue_Btn).should('be.visible').click();\ncy.wait(8000);",
+              "err": {},
+              "uuid": "888c894a-8e9f-4ee0-bc77-5e19d1f10439",
+              "parentUUID": "216fed3b-f4c8-4ae8-b974-6051b621c8b1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fruits and Vegitables section and buy the add the items into cart and buy it ",
+              "fullTitle": "Zepto Website Navigation Fruits and Vegitables section and buy the add the items into cart and buy it ",
+              "timedOut": null,
+              "duration": 13309,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(2000);\ncy.get(FruitsAndVeges, {\n  timeout: 10000\n}).click();\ncy.wait(4000);\ncy.get('#b4827798-fcb6-4520-ba5b-0f2bd9bd7208', {\n  timeout: 10000\n}).click();\ncy.wait(3000);",
+              "err": {},
+              "uuid": "0f87f837-9b2e-4245-b76f-b1687d5001fe",
+              "parentUUID": "216fed3b-f4c8-4ae8-b974-6051b621c8b1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f6fe4e57-a5f1-4134-860c-d683f9e2a050",
+            "65e40daa-fb81-4b64-8fd0-0bab614ef72c",
+            "0f87f837-9b2e-4245-b76f-b1687d5001fe"
+          ],
+          "failures": [],
+          "pending": [
+            "888c894a-8e9f-4ee0-bc77-5e19d1f10439"
+          ],
+          "skipped": [],
+          "duration": 36379,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

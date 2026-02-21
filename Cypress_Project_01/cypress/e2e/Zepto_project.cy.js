@@ -33,7 +33,6 @@ describe('Zepto Website Navigation', () => {
     it('Fruits and Vegitables section and buy the add the items into cart and buy it ',()=>
     {
       cy.wait(2000);
-      cy.wait(3000);
       cy.get(FruitsAndVeges,{timeout:10000}).click();
       cy.wait(4000);
       cy.get('#b4827798-fcb6-4520-ba5b-0f2bd9bd7208',{timeout:10000}).click();
